@@ -106,7 +106,7 @@ void iter_method(double t, double tau, dv &y, const dv &x) {
     while (max(y, y_next) >= eps) { 
         y = y_next;
         if(iter == 2) break;
-		non_linear_implicit_step(t, tau, y_next, x);
+	non_linear_implicit_step(t, tau, y_next, x);
         iter++;
 	}
     y = y_next; 
